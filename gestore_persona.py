@@ -4,10 +4,10 @@ persona={
     "eta":27
 }
 
-operazioni=("aggiungere","modificare","eliminare","leggere","0")
+operazioni=("aggiungere","modificare","eliminare","leggere","0","DS")
 
 def start():
-    print("Operazioni disponibili: aggiungere, modificare, eliminare, leggere, 0 (per uscire)")
+    print("Operazioni disponibili: aggiungere, modificare, eliminare, leggere, 0 (per uscire),visualizzare i dati come Serie (DS)")
     operazione=input("Cosa vuoi fare ?: ")
     if operazione == operazioni[4]:    
         raise Exception("Arresto del programma")
@@ -24,7 +24,10 @@ def start():
             print(persona)   
         elif operazione == operazioni[3]:
             x = input("Scrivi la chiave da leggere: ")
-            print(persona[x])                            
+            print(persona[x])
+        elif operazione == operazioni[5]:
+            df=pd.Series(persona)
+            print(df)  
     except:
         pass            
 
