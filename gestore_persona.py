@@ -1,3 +1,4 @@
+import pandas as pd
 persona={
     "nome":"Salvatore",
     "Cognome":"Ferraro",
